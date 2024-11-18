@@ -1,21 +1,18 @@
 <?php 
-
-    if(isset($_GET['submit'])){
-        $username = $_GET['username'];
-        $password = $_GET['password'];
-
-        if($username == null || $password == null){
-            echo "Null username/password";
-        }elseif($username == $password){
-            //echo "valid user";
-            header('location: home.html');
+    if (isset($_POST['submit'])) {
+        if (!empty($_POST['Degree']) && count($_POST['Degree']) >= 2) {
+            echo "Selected the following degrees: ";
+            $degrees = $_POST['Degree'];
+            for ($i = 0; $i < count($degrees); $i++) {
+                echo $degrees[$i];
+                if ($i < count($degrees) - 1) {
+                    echo ", ";
+                }
+            }
+        } else {
+            echo "Select at least two degrees.";
         }
-
-    
-    }else{
-        //echo "invalid request!";
+    } else {
         header('location: name.html');
     }
-
-
 ?>
