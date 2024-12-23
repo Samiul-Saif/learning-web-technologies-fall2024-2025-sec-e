@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+        }
+        legend {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"],
+        input[type="reset"],
+        a {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table height="500px" width="20%">
+        <tr height="80px">
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <form action="../controller/reg_check.php" method="post">
+                    <fieldset>
+                        <legend align="center">Registration</legend>
+                        <table align="center" width="100%">
+                            <tr>
+                                <td>
+                                    <label for="id">Id</label><br>
+                                    <input type="text" name="id" id="id" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="password">Password</label><br>
+                                    <input type="password" name="password" id="password" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="confirm_password">Confirm Password</label><br>
+                                    <input type="password" name="confirm_password" id="confirm_password" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="name">Name</label><br>
+                                    <input type="text" name="name" id="name" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">Email</label><br>
+                                    <input type="email" name="email" id="email" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>User Type</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="type" value="Farmer" id="farmer">
+                                    <label for="farmer">Farmer</label>
+                                    <input type="radio" name="type" value="Admin" id="admin">
+                                    <label for="admin">Admin</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr></td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <input type="submit" name="signup" value="Sign Up">
+                                    <input type="reset" name="reset" value="Reset">
+                                    <a href="login.html">Sign In</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
