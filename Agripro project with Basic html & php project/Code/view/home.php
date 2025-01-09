@@ -61,7 +61,7 @@ if ($_SESSION['user']['user_type'] == 'admin') {
                         <a href="manage_appointment.php">Manage Appointments</a> |
                         <a href="confirmed_appointment.php">Confirmed Appointments</a> |
                     <?php endif; ?>
-                    <a href="edit.php?id=<?= $_SESSION['user']['id'] ?>">Edit Own Profile</a> |
+                    <a href="selfedit.php?id=<?= $_SESSION['user']['id'] ?>">Edit Own Profile</a> |
                     <?php $_SESSION['requested_from'] = basename($_SERVER['PHP_SELF']); ?>
                     <a href="../controller/logout.php">Logout</a>
                 </p>

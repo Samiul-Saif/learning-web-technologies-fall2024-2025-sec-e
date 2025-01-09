@@ -51,6 +51,16 @@
         }
     }
 
+    function updateSelfUser($id, $username, $email, $password){
+        $con = getConnection();
+        $sql = "update users SET username='$username', password='$password', email='$email' where id='$id'";
+        if(mysqli_query($con, $sql)){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
     function deleteUser($id){
         $con = getConnection();
         $sql = "DELETE FROM users where id=$id";
