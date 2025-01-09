@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+</head>
+<body>
+    <table align="center" height="500px">
+        <tr>
+            <td>
+                <form method="post" action="../controller/signupCheck.php">
+                    <fieldset>
+                        <legend>SIGN UP</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    Name <br>
+                                    <input type="text" name="username" value="" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email <br>
+                                    <input type="email" name="email" value="" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Password <br>
+                                    <input type="password" name="password" value="" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Confirm Password <br>
+                                    <input type="password" name="confirm_password" value=""required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Account Type <br>
+                                    <select name="user_type" required>
+                                        <option value=""></option>
+                                        <option value="advisor">Advisor</option>
+                                        <option value="farmer">Farmer</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" name="submit" value="Submit" />
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Hyperlink to login page below the form -->
+    <p align="center">
+        <a href="login.html">Login</a>
+    </p>
+</body>
+</html>
